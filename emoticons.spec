@@ -3,7 +3,7 @@ Summary(pl):	EmotIkonki
 Name:		emoticons
 Version:	0.1
 Release:	0.1
-License:	GPL ?
+License:	GPL (?)
 Group:		Applications/Communications
 Source0:	%{name}-gg-031212.tgz
 URL:		http://www.gadu.gnu.pl/
