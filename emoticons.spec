@@ -1,5 +1,5 @@
-#
 Summary:	EmotIcons
+Summary(pl):	EmotIkonki
 Name:		emoticons
 Version:	0.1
 Release:	0.1
@@ -12,21 +12,28 @@ BuildRequires:	iconv
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-EmoteIcons
+EmoteIcons.
 
-%package -n emoticons-kopete-gg
+%description -l pl
+EmotIkonki.
+
+%package kopete-gg
 Summary:	Gadu-Gadu emoticons for kopete
+Summary(pl):	Emotikonki Gadu-Gadu dla kopete
 Group:		X11/Applications/Networking
 Requires:	kdenetwork-kopete
 
-%description -n emoticons-kopete-gg
-Gadu-Gadu emoticons for kopete
+%description kopete-gg
+Gadu-Gadu emoticons for kopete.
+
+%description kopete-gg -l pl
+Emotikonki Gadu-Gadu dla kopete.
 
 %prep
-%setup -Tcqn %{name} -a0
+%setup -qc
 
 %build
-gcc -o conv conv.c
+%{__cc} %{rpmldflags} %{rpmcflags} -o conv conv.c
 
 rm -rf out; mkdir out
 # oryginal emots/2/emots.txt have some errors :(
@@ -55,13 +62,13 @@ rm -f out/*_na.*
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_datadir}/apps/kopete/pics/emoticons/Gadu-Gadu
 
-install -d $RPM_BUILD_ROOT%{_datadir}/apps/kopete/pics/emoticons/Gadu-Gadu/
-cp out/* $RPM_BUILD_ROOT%{_datadir}/apps/kopete/pics/emoticons/Gadu-Gadu/
+cp out/* $RPM_BUILD_ROOT%{_datadir}/apps/kopete/pics/emoticons/Gadu-Gadu
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -n emoticons-kopete-gg
+%files kopete-gg
 %defattr(644,root,root,755)
-%{_datadir}/apps/kopete/pics/emoticons/Gadu-Gadu/*
+%{_datadir}/apps/kopete/pics/emoticons/Gadu-Gadu
