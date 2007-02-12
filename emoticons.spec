@@ -1,5 +1,5 @@
 Summary:	EmotIcons
-Summary(pl):	EmotIkonki
+Summary(pl.UTF-8):   EmotIkonki
 Name:		emoticons
 Version:	0.1
 Release:	0.1
@@ -14,19 +14,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 EmoteIcons.
 
-%description -l pl
+%description -l pl.UTF-8
 EmotIkonki.
 
 %package kopete-gg
 Summary:	Gadu-Gadu emoticons for kopete
-Summary(pl):	Emotikonki Gadu-Gadu dla kopete
+Summary(pl.UTF-8):   Emotikonki Gadu-Gadu dla kopete
 Group:		X11/Applications/Networking
 Requires:	kdenetwork-kopete
 
 %description kopete-gg
 Gadu-Gadu emoticons for kopete.
 
-%description kopete-gg -l pl
+%description kopete-gg -l pl.UTF-8
 Emotikonki Gadu-Gadu dla kopete.
 
 %prep
