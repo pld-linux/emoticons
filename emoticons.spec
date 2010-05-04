@@ -20,7 +20,7 @@ REASON="alone"
 %else
 REASON="sad"
 %endif
-echo "Executing(%%because_i'm_$REASON): "
+echo "Executing(%%because_i_am_$REASON): "
 
 exit 1
 
