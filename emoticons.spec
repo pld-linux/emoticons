@@ -6,6 +6,7 @@ Release:	0.1
 License:	GPL (?)
 Group:		Applications/Communications
 Source0:	%{name}-gg-031212.tgz
+# Source0-md5:	eb824103b01d2fb4bd376b0540ba176d
 URL:		http://www.gadu.gnu.pl/
 BuildRequires:	ImageMagick-coder-png
 BuildRequires:	iconv
